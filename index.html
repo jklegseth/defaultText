@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>jQuery toggleText Plugin Example</title>
+      <style type="text/css">
+        body, input {
+          font: normal 15px/1em "Lucida Grande",Arial,sans-serif;
+        }
+
+        fieldset {
+          width: 450px;
+        }
+
+        label {
+          font-size: 13px;
+          font-weight: bold;
+        }
+
+        input {
+          background: none repeat scroll 0 0 #EEEEEE;
+          border: 2px solid #DFDFDF;
+          color: #6F6F6F;
+          display: block;
+          font-weight: bold;
+          margin: 5px 0 15px 0;
+          outline: medium none;
+          padding: 5px 10px;
+          width: 300px;
+        }
+
+        .default {
+          font-style: italic;
+          font-weight: normal;
+        }
+
+        .active {
+          background: none repeat scroll 0 0 #FFF9B7;
+          border-color: #D3BE04;
+          color: #000;  
+        }
+
+        .changed {
+          border-color:#73A6FF;  
+          background:#EFF5FF;  
+          color:#000;
+        }
+
+        form {
+          margin-bottom: 30px;
+        }
+
+        legend {
+          color: #999;
+          font-style: italic;
+        }
+
+        h1 {
+          font-size: 1.5em;
+        }
+      </style>
+  </head>
+  <body>
+    <h1>jQuery DefaultText Plugin</h1>
+    <p>This form uses the default text plugin to offer helpful text and change styling.</p>
+    <form class="example-a">
+      <fieldset>
+        <legend>Helpful Hints Example</legend>
+        <label for="name">Your Name</label>
+        <input type="text" value="" name="name" id="name" data-default-text="First Last" />
+
+        <label for="account">Your Account Number</label>
+        <input type="text" value="" name="account" id="account" data-default-text="Starts with a 99-" />
+
+        <label for="phone">Your Phone Number</label>
+        <input type="text" value="" name="phone" id="phone" data-default-text="123-456-7890 or (123)456-7890" />
+
+        <label for="zip">Your Zip Code</label>
+        <input type="text" value="" name="ssn" id="zip" data-default-text="12345 or 12345-0987" />
+
+        <label for="website">Your Website</label>
+        <input type="text" value="" name="website" id="website" data-default-text="(No http or www:) google.com, or yahoo.com" />
+      </fieldset>
+    </form>
+
+    <p>Without JavaScript this will be a form with labels, like above. We use JavaScript to hide the labels.</p>
+    <form class="example-b">
+      <fieldset>
+        <legend>Tight Space, Remove Labels Example</legend>
+        <label for="name">Your Name</label>
+        <input type="text" value="" name="name" id="name" data-default-text="Please enter your name" />
+
+        <label for="account">Your Account Number</label>
+        <input type="text" value="" name="account" id="account" data-default-text="Please enter your account number" />
+
+        <label for="phone">Your Phone Number</label>
+        <input type="text" value="" name="phone" id="phone" data-default-text="Please enter your phone number" />
+
+        <label for="zip">Your Zip Code</label>
+        <input type="text" value="" name="ssn" id="zip" data-default-text="Please enter your zip code" />
+
+        <label for="website">Your Website</label>
+        <input type="text" value="" name="website" id="website" data-default-text="Please enter your website" />
+      </fieldset>
+    </form>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="js/jquery.defaultText.js"></script>
+    <script type="text/javascript">
+      //first example
+      $('.example-a [data-default-text]').defaultText({
+        defaultClass: 'default',
+        activeClass: 'active',
+        changedClass: 'changed'
+      });
+
+      //second example, hidden labels
+      $('.example-b label').hide();
+      $('.example-b [data-default-text]').defaultText({
+        defaultClass: 'default',
+        activeClass: 'active',
+        changedClass: 'changed'
+      });    
+    </script>
+
+  </body>
+</html>
