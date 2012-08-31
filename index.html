@@ -4,7 +4,7 @@
     <meta charset="utf-8">
       <title>jQuery toggleText Plugin Example</title>
       <style type="text/css">
-        body, input {
+        body, input, textarea {
           font: normal 15px/1em "Lucida Grande",Arial,sans-serif;
         }
 
@@ -17,7 +17,7 @@
           font-weight: bold;
         }
 
-        input {
+        input, textarea {
           background: none repeat scroll 0 0 #EEEEEE;
           border: 2px solid #DFDFDF;
           color: #6F6F6F;
@@ -80,6 +80,9 @@
 
         <label for="website">Your Website</label>
         <input type="text" value="" name="website" id="website" data-default-text="(No http or www:) google.com, or yahoo.com" />
+
+        <label for="more">Tell Us More</label>
+        <textarea id="more" name="more" data-default-text="We especially like to hear about your work history...."></textarea>
       </fieldset>
     </form>
 
@@ -101,6 +104,9 @@
 
         <label for="website">Your Website</label>
         <input type="text" value="" name="website" id="website" data-default-text="Please enter your website" />
+
+        <label for="more">Tell Us More</label>
+        <textarea id="more" name="more" data-default-text="Tell us more..."></textarea>
       </fieldset>
     </form>
     
