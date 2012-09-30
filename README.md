@@ -1,4 +1,4 @@
-#jQuery defaultText Plubin
+#jQuery defaultText Plugin
 =========================
 jQuery plugin that handles default values for text inputs using a *data-* attribute.
 
